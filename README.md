@@ -1,7 +1,5 @@
 # PromptsandInputBoxes
 
-![Build Status](https://build.status.url.here)
-
 ## Description
 
 This module is designed to provide pre-built, dynamic text input or choice prompts for Powershell scripts
