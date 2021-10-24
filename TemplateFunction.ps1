@@ -1,3 +1,5 @@
+<%
+ @"
   <#
     .Synopsis
       Short description
@@ -10,17 +12,16 @@
     [CmdletBinding()]
     param(
         [Parameter(
-            Mandatory = $False,
-            ValueFromPipeline = $True,
-            ValueFromPipelineByPropertyName = $True,
+            Mandatory = $false,
+            ValueFromPipeline = $true,
+            ValueFromPipelineByPropertyName = $true,
             Position = 0
             )]
         [ValidateRange(1,100)]
         [ValidateSet('stringvalue', 'stringvalue')]
-        [ValidateScript({Get-ADUser -Filter "UserPrincipalName -eq ''" | select -ExpandProperty UserPrincipalName} )]
-        [string[]] $var
-      )
-    
+        [ValidateScript( ValidationLogic. $_ is pulled from param input{Get-ADUser -Filter "UserPrincipalName -eq '$_'" | select -ExpandProperty UserPrincipalName} )]
+        [type[]]  $var = "value"
+    )
 
     BEGIN {}
  
@@ -28,3 +29,5 @@
  
     END {}
 
+"@
+%>

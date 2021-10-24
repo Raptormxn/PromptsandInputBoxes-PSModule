@@ -1,57 +1,33 @@
 # PromptsandInputBoxes
 
-## Description
+---
 
 This module is designed to provide pre-built, dynamic text input or choice prompts for Powershell scripts
 
-Authored by Darius Greene
+## Instructions
 
-## Installing
+This module can be loaded as-is by importing PromptsandInputBoxes.psd1. This is mainly intended for development purposes.
 
-The easiest way to get PromptsandInputBoxes is using the [PowerShell Gallery](https://powershellgallery.com/packages/PromptsandInputBoxes/)!
+To speed up module load time and minimize the amount of files that needs to be signed, distributed and installed, this module contains a build script that will package up the module into three files:
 
-### Inspecting the module
+- PromptsandInputBoxes.psd1
+- PromptsandInputBoxes.psm1
+- license.txt
 
-Best practice is that you inspect modules prior to installing them. You can do this by saving the module to a local path:
+To build the module, make sure you have the following pre-req modules:
 
-``` PowerShell
-PS> Save-Module -Name PromptsandInputBoxes -Path <path>
+- Pester (Required Version 4.1.1)
+- InvokeBuild (Required Version 3.2.1)
+- PowerShellGet (Required Version 1.6.0)
+- ModuleBuilder (Required Version 1.0.0)
+
+Start the build by running the following command from the project root:
+
+```powershell
+Invoke-Build
 ```
 
-### Installing the module
+This will package all code into files located in .\bin\PromptsandInputBoxes. That folder is now ready to be installed, copy to any path listed in you PSModulePath environment variable and you are good to go!
 
-Once you trust a module, you can install it using:
-
-``` PowerShell
-PS> Install-Module -Name PromptsandInputBoxes
-```
-
-### Updating PromptsandInputBoxes
-
-Once installed from the PowerShell Gallery, you can update it using:
-
-``` PowerShell
-PS> Update-Module -Name PromptsandInputBoxes
-```
-
-### Uninstalling PromptsandInputBoxes
-
-To uninstall PromptsandInputBoxes:
-
-``` PowerShell
-PS> Uninstall-Module -Name PromptsandInputBoxes
-```
-
-## Contributing to PromptsandInputBoxes
-
-Interested in contributing? Read how you can [Contribute](contributing.md) to PromptsandInputBoxes
-
-This project maintains a [Code of Conduct](code-of-conduct.md) that establishes how the project is governed and how everyone involved is expected to behave. You can report unacceptable behavior to [dariusg23@outlook.com](mailto:dariusg23@outlook.com).
-
-## Release History
-
-A detailed release history is contained in the [Change Log](CHANGELOG.md).
-
-## License
-
-PromptsandInputBoxes is provided under the [MIT license](LICENSE.md).
+---
+Maintained by Darius Greene
