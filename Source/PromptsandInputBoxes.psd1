@@ -54,7 +54,7 @@ Description = 'This module is designed to provide pre-built, dynamic text input 
 # RequiredModules = @()
 
 # Assemblies that must be loaded prior to importing this module
-RequiredAssemblies = @('.\Dependencies\Assembly\PresentationFramework.dll','.\Dependencies\Assembly\Microsoft.VisualBasic.dll')
+RequiredAssemblies = @('.\PresentationFramework.dll','.\Microsoft.VisualBasic.dll')
 
 # Script files (.ps1) that are run in the caller's environment prior to importing this module.
 # ScriptsToProcess = @()

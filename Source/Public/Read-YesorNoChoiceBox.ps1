@@ -1,4 +1,4 @@
-Function Read-YesorNoChoiceBox{  
+Function Read-YesorNoChoiceBox{
   <#
 .Synopsis
         Displays a "Yes" or "No" message box, returns string value for $Choice
@@ -8,7 +8,7 @@ Function Read-YesorNoChoiceBox{
         The users choice is stored in the $Choice and returned after the function executes.
 
 .EXAMPLE
-        Read-YesorNoChoiceBox -Title "Proceed with x?" -Message "Would you like to proceed with X? Please choose "Yes" or "No" -Icon Question 
+        Read-YesorNoChoiceBox -Title "Proceed with x?" -Message "Would you like to proceed with X? Please choose "Yes" or "No" -Icon Question
 
 .PARAMETER Title
         The Title port of the message box. This will appear at the top of the message box window.
@@ -35,7 +35,7 @@ Function Read-YesorNoChoiceBox{
         [Parameter(Mandatory = $true)]
         [ValidateSet('Question','Warning','Asterisk','Hand','None')]
         [string]$Icon
-  )
+ )
 
   BEGIN {}
 
@@ -43,7 +43,7 @@ Function Read-YesorNoChoiceBox{
 
         #Display Yes or No Message Prompt
         $Choice = [System.Windows.MessageBox]::Show($Message,$Title,'YesNo',$Icon)
-  }
+}
 
   END {
         return $Choice

@@ -2,7 +2,7 @@
 
 ---
 
-This module is designed to provide pre-built, dynamic text input or choice prompts for Powershell scripts
+This module is designed to provide easy to use, dynamic text input and choice prompts GUI windows for Powershell scripts
 
 ## Instructions
 
